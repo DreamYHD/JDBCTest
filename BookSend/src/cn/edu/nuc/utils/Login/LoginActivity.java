@@ -1,4 +1,4 @@
-package cn.edu.nuc1.ui.Login;
+package cn.edu.nuc.utils.Login;
 
 /**
  * Created by Administrator on 2017/6/10.
@@ -9,9 +9,9 @@ package cn.edu.nuc1.ui.Login;
  * and open the template in the editor.
  */
 
-import cn.edu.nuc1.DBSystemManage;
-import cn.edu.nuc1.ui.manage.AdminManageActivity;
-import cn.edu.nuc1.ui.manage.TeacherManageActivity;
+import cn.edu.nuc.utils.DBSystemManage;
+import cn.edu.nuc.utils.ui.ManagerActivity;
+import cn.edu.nuc.utils.ui.TeacherActivity;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,14 +23,14 @@ import java.sql.Statement;
  *
  * @author Administrator
  */
-public class LoginActivity extends javax.swing.JFrame {
+public class LoginActivity extends JFrame {
     private Statement mStatement = DBSystemManage.getInstance().mStatement;
 
     /**
      * Creates new form LoginActivity
      */
     public LoginActivity() {
-        mStatement = DBSystemManage.getInstance().mStatement;
+        //mStatement = DBSystemManage.getInstance().mStatement;
 
         initComponents();
     }
@@ -44,97 +44,93 @@ public class LoginActivity extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jLabel1 = new JLabel();
+        jLabel2 = new JLabel();
+        jLabel3 = new JLabel();
+        jLabel4 = new JLabel();
+        jComboBox1 = new JComboBox<>();
+        jTextField1 = new JTextField();
+        jTextField2 = new JPasswordField();
+        jButton1 = new JButton();
+        jButton2 = new JButton();
 
         //setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("宋体", 1, 36)); // NOI18N
+        jLabel1.setFont(new Font("宋体", 1, 36)); // NOI18N
         jLabel1.setText(" 教材征订与分发管理系统");
 
-        jLabel2.setFont(new java.awt.Font("宋体", 1, 18)); // NOI18N
+        jLabel2.setFont(new Font("宋体", 1, 18)); // NOI18N
         jLabel2.setText("用户：");
 
-        jLabel3.setFont(new java.awt.Font("宋体", 1, 18)); // NOI18N
+        jLabel3.setFont(new Font("宋体", 1, 18)); // NOI18N
         jLabel3.setText("密码：");
 
-        jLabel4.setFont(new java.awt.Font("宋体", 1, 18)); // NOI18N
+        jLabel4.setFont(new Font("宋体", 1, 18)); // NOI18N
         jLabel4.setText("角色：");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "管理员", "教师" }));
+        jComboBox1.setModel(new DefaultComboBoxModel<>(new String[] { "管理员", "教师" }));
 
 
 
-        jButton1.setFont(new java.awt.Font("宋体", 1, 14)); // NOI18N
+        jButton1.setFont(new Font("宋体", 1, 14)); // NOI18N
         jButton1.setText("登录");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        jButton1.addActionListener(evt -> jButton1ActionPerformed(evt));
 
-        jButton2.setFont(new java.awt.Font("宋体", 1, 14)); // NOI18N
+        jButton2.setFont(new Font("宋体", 1, 14)); // NOI18N
         jButton2.setText("注册");
         jButton2.addActionListener((java.awt.event.ActionEvent evt) ->jButton2ActionPerformed(evt));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
+                                                .addGroup(GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                                         .addGap(236, 236, 236)
-                                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE)
                                                         .addGap(45, 45, 45)
-                                                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
-                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jButton2, GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
+                                                .addGroup(GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                                                         .addGroup(layout.createSequentialGroup()
                                                                                 .addGap(203, 203, 203)
-                                                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
-                                                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                                                .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE))
+                                                                        .addComponent(jLabel3, GroupLayout.Alignment.TRAILING))
+                                                                .addComponent(jLabel4, GroupLayout.Alignment.TRAILING))
+                                                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                                                 .addComponent(jTextField1)
                                                                 .addComponent(jTextField2)
                                                                 .addComponent(jComboBox1, 0, 174, Short.MAX_VALUE))))
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGap(95, 95, 95)
-                                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 457, GroupLayout.PREFERRED_SIZE)))
                                 .addGap(104, 104, 104))
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(39, 39, 39)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 55, GroupLayout.PREFERRED_SIZE)
                                 .addGap(71, 71, 71)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE))
                                 .addGap(37, 37, 37)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel3))
                                 .addGap(33, 33, 33)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jComboBox1, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE))
                                 .addGap(60, 60, 60)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE))
                                 .addGap(51, 51, 51))
         );
 
@@ -146,33 +142,30 @@ public class LoginActivity extends javax.swing.JFrame {
         String user = jTextField1.getText();
         String password = jTextField2.getText();
 
-        // TODO add your handling code here:
         //管理员状态
         if (jComboBox1.getSelectedIndex()==0){
             System.out.println("管理员状态");
-
             ResultSet mResultSet = null;
             try {
-                mResultSet = mStatement.executeQuery("select * from adminator where Mname="+"'"+user+"'");
+                mResultSet = mStatement.executeQuery("select * from manager where Mname="+"'"+user+"'");
                 if (mResultSet.next()){
                     System.out.println("用户存在");
                     String finalid= mResultSet.getString(1);
                     System.out.println(finalid);
 
-                    //JOptionPane.showMessageDialog(this,"用户存在");
-                    String realPassword = mResultSet.getString(4);
+                    JOptionPane.showMessageDialog(this,"用户存在");
+                    String realPassword = mResultSet.getString(3);
                     if (realPassword.equals(password)){
                         JOptionPane.showMessageDialog(this,"登录成功");
-                        AdminManageActivity mAdminManageActivity = new AdminManageActivity(finalid);
+                        ManagerActivity mAdminManageActivity = new ManagerActivity(finalid);
                         mAdminManageActivity.setLocation(200,200);
                         mAdminManageActivity.setVisible(true);
-                        //this.setVisible(false);
+                        this.setVisible(false);
                     }else {
                         JOptionPane.showMessageDialog(this,"密码错误");
                     }
                 }else {
                     JOptionPane.showMessageDialog(this,"用户不存在");
-
                 }
             } catch (SQLException mE) {
                 mE.printStackTrace();
@@ -191,10 +184,10 @@ public class LoginActivity extends javax.swing.JFrame {
                     String finalid= mResultSet.getString(1);
                     System.out.println(finalid);
                     //JOptionPane.showMessageDialog(this,"用户存在");
-                    String realPassword = mResultSet.getString(4);
+                    String realPassword = mResultSet.getString(3);
                     if (realPassword.equals(password)){
                         JOptionPane.showMessageDialog(this,"登录成功");
-                        TeacherManageActivity mTeacherManageActivity = new TeacherManageActivity(finalid);
+                        TeacherActivity mTeacherManageActivity = new TeacherActivity(finalid);
                         mTeacherManageActivity.setLocation(200,200);
                         mTeacherManageActivity.setVisible(true);
 
@@ -244,9 +237,9 @@ public class LoginActivity extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
@@ -256,14 +249,14 @@ public class LoginActivity extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(LoginActivity.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(LoginActivity.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(LoginActivity.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         LoginActivity mLoginActivity = new LoginActivity();
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        EventQueue.invokeLater(new Runnable() {
             public void run() {
 
                 mLoginActivity.setLocation(600,200);
@@ -273,14 +266,14 @@ public class LoginActivity extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JPasswordField jTextField2;
+    private JButton jButton1;
+    private JButton jButton2;
+    private JComboBox<String> jComboBox1;
+    private JLabel jLabel1;
+    private JLabel jLabel2;
+    private JLabel jLabel3;
+    private JLabel jLabel4;
+    private JTextField jTextField1;
+    private JPasswordField jTextField2;
     // End of variables declaration
 }
